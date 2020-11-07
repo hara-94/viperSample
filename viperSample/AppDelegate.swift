@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else {
             let window = UIWindow(frame: UIScreen.main.bounds)
             self.window = window
-            window.rootViewController = ViewController(nibName: nil, bundle: nil)
+            let rootViewController = ArticleListViewController()
+            window.rootViewController = UINavigationController(rootViewController: rootViewController)
             window.makeKeyAndVisible()
         }
         return true

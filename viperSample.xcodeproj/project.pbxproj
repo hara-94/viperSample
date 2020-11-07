@@ -15,6 +15,10 @@
 		C7D0784925550C9E00F6F258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D0784725550C9E00F6F258 /* LaunchScreen.storyboard */; };
 		C7D0785425550C9F00F6F258 /* viperSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0785325550C9F00F6F258 /* viperSampleTests.swift */; };
 		C7D0785F25550C9F00F6F258 /* viperSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0785E25550C9F00F6F258 /* viperSampleUITests.swift */; };
+		C7D078752555168000F6F258 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D078742555168000F6F258 /* ArticleListViewController.swift */; };
+		C7D07883255518BB00F6F258 /* ArticleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D07882255518BB00F6F258 /* ArticleEntity.swift */; };
+		C7D078892555197D00F6F258 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D078882555197D00F6F258 /* ArticleDetailViewController.swift */; };
+		C7D0789125551CA000F6F258 /* ArticleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0789025551CA000F6F258 /* ArticleUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		C7D0785A25550C9F00F6F258 /* viperSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = viperSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D0785E25550C9F00F6F258 /* viperSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viperSampleUITests.swift; sourceTree = "<group>"; };
 		C7D0786025550C9F00F6F258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D078742555168000F6F258 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		C7D07882255518BB00F6F258 /* ArticleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleEntity.swift; sourceTree = "<group>"; };
+		C7D078882555197D00F6F258 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		C7D0789025551CA000F6F258 /* ArticleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		C7D0783B25550C9E00F6F258 /* viperSample */ = {
 			isa = PBXGroup;
 			children = (
+				C7D078722555166700F6F258 /* Aticle */,
 				C7D0783C25550C9E00F6F258 /* AppDelegate.swift */,
 				C7D0783E25550C9E00F6F258 /* SceneDelegate.swift */,
 				C7D0784025550C9E00F6F258 /* ViewController.swift */,
@@ -126,6 +135,33 @@
 				C7D0786025550C9F00F6F258 /* Info.plist */,
 			);
 			path = viperSampleUITests;
+			sourceTree = "<group>";
+		};
+		C7D078722555166700F6F258 /* Aticle */ = {
+			isa = PBXGroup;
+			children = (
+				C7D078872555196100F6F258 /* Detail */,
+				C7D078732555166E00F6F258 /* List */,
+				C7D07882255518BB00F6F258 /* ArticleEntity.swift */,
+				C7D0789025551CA000F6F258 /* ArticleUseCase.swift */,
+			);
+			path = Aticle;
+			sourceTree = "<group>";
+		};
+		C7D078732555166E00F6F258 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C7D078742555168000F6F258 /* ArticleListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C7D078872555196100F6F258 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C7D078882555197D00F6F258 /* ArticleDetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +296,11 @@
 			files = (
 				C7D0784125550C9E00F6F258 /* ViewController.swift in Sources */,
 				C7D0783D25550C9E00F6F258 /* AppDelegate.swift in Sources */,
+				C7D078892555197D00F6F258 /* ArticleDetailViewController.swift in Sources */,
+				C7D078752555168000F6F258 /* ArticleListViewController.swift in Sources */,
 				C7D0783F25550C9E00F6F258 /* SceneDelegate.swift in Sources */,
+				C7D07883255518BB00F6F258 /* ArticleEntity.swift in Sources */,
+				C7D0789125551CA000F6F258 /* ArticleUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
