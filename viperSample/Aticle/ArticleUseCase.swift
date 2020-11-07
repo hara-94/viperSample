@@ -50,7 +50,3 @@ private extension UseCase {
         }
     }
 }
-
-final class GetArticlesArrayUseCase { }
-
-final class GetArticleByIdUseCase { }
