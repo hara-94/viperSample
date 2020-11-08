@@ -22,6 +22,7 @@
 		C7D078962556F5A100F6F258 /* GetArticlesArrayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D078952556F5A100F6F258 /* GetArticlesArrayUseCase.swift */; };
 		C7D0789B2556F7B400F6F258 /* GetArticleByIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0789A2556F7B400F6F258 /* GetArticleByIdUseCase.swift */; };
 		C7D078A02556FABC00F6F258 /* ArticleListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0789F2556FABC00F6F258 /* ArticleListRouter.swift */; };
+		C7D078A52556FE2E00F6F258 /* ArticleListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D078A42556FE2E00F6F258 /* ArticleListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C7D078952556F5A100F6F258 /* GetArticlesArrayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticlesArrayUseCase.swift; sourceTree = "<group>"; };
 		C7D0789A2556F7B400F6F258 /* GetArticleByIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticleByIdUseCase.swift; sourceTree = "<group>"; };
 		C7D0789F2556FABC00F6F258 /* ArticleListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListRouter.swift; sourceTree = "<group>"; };
+		C7D078A42556FE2E00F6F258 /* ArticleListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				C7D078952556F5A100F6F258 /* GetArticlesArrayUseCase.swift */,
 				C7D0789A2556F7B400F6F258 /* GetArticleByIdUseCase.swift */,
 				C7D0789F2556FABC00F6F258 /* ArticleListRouter.swift */,
+				C7D078A42556FE2E00F6F258 /* ArticleListPresenter.swift */,
 			);
 			path = Aticle;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				C7D0789B2556F7B400F6F258 /* GetArticleByIdUseCase.swift in Sources */,
 				C7D0783D25550C9E00F6F258 /* AppDelegate.swift in Sources */,
 				C7D078892555197D00F6F258 /* ArticleDetailViewController.swift in Sources */,
+				C7D078A52556FE2E00F6F258 /* ArticleListPresenter.swift in Sources */,
 				C7D078752555168000F6F258 /* ArticleListViewController.swift in Sources */,
 				C7D0783F25550C9E00F6F258 /* SceneDelegate.swift in Sources */,
 				C7D07883255518BB00F6F258 /* ArticleEntity.swift in Sources */,

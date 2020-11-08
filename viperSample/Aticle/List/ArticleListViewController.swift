@@ -10,11 +10,17 @@ import UIKit
 final class ArticleListViewController: UIViewController {
     private let tableView: UITableView = .init()
     private var articleEntities: [ArticleEntity] = []
+    private var presenter: ArticleListPresenterProtocol!
     
     override func loadView() {
         super.loadView()
         
         setTableView()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.didLoad()
     }
 }
 
@@ -43,5 +49,21 @@ private extension ArticleListViewController {
             tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
             tableView.heightAnchor.constraint(equalTo: view.heightAnchor)
         ])
+    }
+}
+
+
+extension ArticleListViewController: ArticleListViewProtocol {
+    func showArticles(_ articleEntities: [ArticleEntity]) {
+        self.articleEntities = articleEntities
+        tableView.reloadData()
+    }
+    
+    func showEmpty() {
+        showArticles([])
+    }
+    
+    func showError(_ error: Error) {
+        //今回はスキップ
     }
 }

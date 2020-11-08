@@ -1,0 +1,48 @@
+//
+//  ArticleListPresenter.swift
+//  viperSample
+//
+//  Created by hikaruhara on 2020/11/08.
+//
+
+import Foundation
+
+protocol ArticleListPresenterProtocol: AnyObject {
+    func didLoad()
+    func didSelect(articleEntity: ArticleEntity)
+}
+
+protocol ArticleListViewProtocol: AnyObject {
+    func showArticles(_ articleEntities: [ArticleEntity])
+    func showEmpty()
+    func showError(_ error: Error)
+}
+
+class ArticleListPresenter: ArticleListPresenterProtocol {
+    weak var view: ArticleListViewProtocol!
+    
+    init(view: ArticleListViewProtocol) {
+        self.view = view
+    }
+}
+
+extension ArticleListPresenter {
+    func didLoad() {
+        GetArticlesArrayUseCase().execute(()) { [weak self] (result) in
+            guard let self = self else { return }
+            switch result {
+            case let .success(articleEntities):
+                if articleEntities.isEmpty {
+                    self.view.showEmpty()
+                }
+                self.view.showArticles(articleEntities)
+            case let .failure(error):
+                self.view.showError(error)
+            }
+        }
+    }
+    
+    func didSelect(articleEntity: ArticleEntity) {
+        
+    }
+}
