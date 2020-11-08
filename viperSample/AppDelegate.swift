@@ -19,6 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let window = UIWindow(frame: UIScreen.main.bounds)
             self.window = window
             let rootViewController = ArticleListViewController()
+            rootViewController.presenter = ArticleListPresenter(
+                view: rootViewController,
+                inject: ArticleListPresenter.Dependency(
+                    router: ArticleListRouter(view: rootViewController),
+                    getArticlisArrayUseCase: UseCase(GetArticlesArrayUseCase())
+                )
+            )
             window.rootViewController = UINavigationController(rootViewController: rootViewController)
             window.makeKeyAndVisible()
         }

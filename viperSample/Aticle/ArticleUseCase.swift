@@ -15,6 +15,7 @@ protocol UseCaseProtocol where Failure: Error {
     func execute(_ parameter: Parameter, completion: ((Result<Success, Failure>) -> ())?)
 }
 
+//具体クラスとして使用される
 class UseCase<Parameter, Success, Failure: Error> {
     private let instance: UseCaseInstanceBase<Parameter, Success, Failure>
     

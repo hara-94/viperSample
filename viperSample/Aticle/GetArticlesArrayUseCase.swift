@@ -8,6 +8,11 @@
 import Foundation
 
 final class GetArticlesArrayUseCase: UseCaseProtocol {
+    //executeメソッドで明示されているので省略可
+    typealias Parameter = Void
+    typealias Success = [ArticleEntity]
+    typealias Failure = Error
+    
     func execute(_ parameter: Void, completion: ((Result<[ArticleEntity], Error>) -> ())?) {
         let res: [ArticleEntity] = [
             .init(id: 1, userId: 1, title: "title1", body: "body1"),
