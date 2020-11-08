@@ -1,15 +1,17 @@
 # viperSample
-This project is sample for learning VIPER architecture
+This project is sample for learning VIPER architecture(https://youtu.be/ieqNIySokxI)
 
 Apple MVC
-UIView(main)　→　V<br>
-└subView　→　V<br>
-UIViewContrller　→　C<br>
+V → UIView(main)<br>
+    subView<br>
+C → UIViewContrller<br>
 M　→　？<br>
 
 problem<br>
 開発者によって認識が異なる<br>
 Fat ViewControllerになりがち<br>
+
+What is VIPER<br>
 
 View<br>
 見た目とユーザ操作を担当<br>
