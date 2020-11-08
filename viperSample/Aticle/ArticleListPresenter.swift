@@ -20,15 +20,17 @@ protocol ArticleListViewProtocol: AnyObject {
 
 class ArticleListPresenter: ArticleListPresenterProtocol {
     weak var view: ArticleListViewProtocol!
+    private var di: Dependency
     
-    init(view: ArticleListViewProtocol) {
+    init(view: ArticleListViewProtocol, inject dependency: Dependency) {
         self.view = view
+        self.di = dependency
     }
 }
 
 extension ArticleListPresenter {
     func didLoad() {
-        GetArticlesArrayUseCase().execute(()) { [weak self] (result) in
+        di.getArticlisArrayUseCase.execute(()) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case let .success(articleEntities):
@@ -43,6 +45,13 @@ extension ArticleListPresenter {
     }
     
     func didSelect(articleEntity: ArticleEntity) {
-        
+        di.router.showArticleDetail(articleEntity: articleEntity)
+    }
+}
+
+extension ArticleListPresenter {
+    struct Dependency {
+        let router: ArticleListRouterProtocol!
+        let getArticlisArrayUseCase: UseCase<Void, [ArticleEntity], Error>
     }
 }

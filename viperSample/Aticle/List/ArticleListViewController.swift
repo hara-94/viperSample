@@ -10,7 +10,7 @@ import UIKit
 final class ArticleListViewController: UIViewController {
     private let tableView: UITableView = .init()
     private var articleEntities: [ArticleEntity] = []
-    private var presenter: ArticleListPresenterProtocol!
+    var presenter: ArticleListPresenterProtocol!
     
     override func loadView() {
         super.loadView()
@@ -24,7 +24,13 @@ final class ArticleListViewController: UIViewController {
     }
 }
 
-extension ArticleListViewController: UITableViewDelegate { }
+extension ArticleListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        presenter.didSelect(articleEntity: articleEntities[indexPath.row])
+    }
+}
 
 extension ArticleListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
