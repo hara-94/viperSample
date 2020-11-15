@@ -19,7 +19,11 @@ class ArticleListRouter: ArticleListRouterProtocol {
     }
     
     func showArticleDetail(articleEntity: ArticleEntity) {
-        //仮実装
-        print("詳細画面は遷移 記事ID: \(articleEntity.id)")
+        let viewController = ArticleDetailViewController()
+        viewController.articleEntity = articleEntity
+        viewController.presenter = ArticleDetailPresenter(
+            view: viewController,
+            inject: .init(getArticleByIdUseCase: .init(GetArticleByIdUseCase())))
+        view.navigationController?.pushViewController(viewController, animated: true)
     }
 }
