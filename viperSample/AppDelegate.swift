@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 view: rootViewController,
                 inject: ArticleListPresenter.Dependency(
                     router: ArticleListRouter(view: rootViewController),
-                    getArticlisArrayUseCase: UseCase(GetArticlesArrayUseCase())
+                    getArticlesArrayUseCase: UseCase(GetArticlesArrayUseCase())
                 )
             )
             window.rootViewController = UINavigationController(rootViewController: rootViewController)

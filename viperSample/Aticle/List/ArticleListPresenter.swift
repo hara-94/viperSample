@@ -30,7 +30,7 @@ class ArticleListPresenter: ArticleListPresenterProtocol {
 
 extension ArticleListPresenter {
     func didLoad() {
-        di.getArticlisArrayUseCase.execute(()) { [weak self] (result) in
+        di.getArticlesArrayUseCase.execute(()) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case let .success(articleEntities):
@@ -52,6 +52,6 @@ extension ArticleListPresenter {
 extension ArticleListPresenter {
     struct Dependency {
         let router: ArticleListRouterProtocol!
-        let getArticlisArrayUseCase: UseCase<Void, [ArticleEntity], Error>
+        let getArticlesArrayUseCase: UseCase<Void, [ArticleEntity], Error>
     }
 }
