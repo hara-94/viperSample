@@ -153,8 +153,6 @@
 				C7D0789025551CA000F6F258 /* ArticleUseCase.swift */,
 				C7D078952556F5A100F6F258 /* GetArticlesArrayUseCase.swift */,
 				C7D0789A2556F7B400F6F258 /* GetArticleByIdUseCase.swift */,
-				C7D0789F2556FABC00F6F258 /* ArticleListRouter.swift */,
-				C7D078A42556FE2E00F6F258 /* ArticleListPresenter.swift */,
 			);
 			path = Aticle;
 			sourceTree = "<group>";
@@ -163,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				C7D078742555168000F6F258 /* ArticleListViewController.swift */,
+				C7D078A42556FE2E00F6F258 /* ArticleListPresenter.swift */,
+				C7D0789F2556FABC00F6F258 /* ArticleListRouter.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -493,6 +493,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6FXVG8497;
 				INFOPLIST_FILE = viperSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,6 +512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6FXVG8497;
 				INFOPLIST_FILE = viperSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
