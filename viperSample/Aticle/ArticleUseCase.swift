@@ -16,6 +16,7 @@ protocol UseCaseProtocol where Failure: Error {
 }
 
 //具体クラスとして使用される
+//イニシャライザに渡されるTが個別の"〜Usecase"
 class UseCase<Parameter, Success, Failure: Error> {
     private let instance: UseCaseInstanceBase<Parameter, Success, Failure>
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3219E0542560BE0E003BBBA2 /* ArticleDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219E0532560BE0E003BBBA2 /* ArticleDetailPresenter.swift */; };
 		C7D0783D25550C9E00F6F258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0783C25550C9E00F6F258 /* AppDelegate.swift */; };
 		C7D0783F25550C9E00F6F258 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D0783E25550C9E00F6F258 /* SceneDelegate.swift */; };
 		C7D0784425550C9E00F6F258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D0784225550C9E00F6F258 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3219E0532560BE0E003BBBA2 /* ArticleDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailPresenter.swift; sourceTree = "<group>"; };
 		C7D0783925550C9E00F6F258 /* viperSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viperSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D0783C25550C9E00F6F258 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7D0783E25550C9E00F6F258 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D078882555197D00F6F258 /* ArticleDetailViewController.swift */,
+				3219E0532560BE0E003BBBA2 /* ArticleDetailPresenter.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				C7D078A52556FE2E00F6F258 /* ArticleListPresenter.swift in Sources */,
 				C7D078752555168000F6F258 /* ArticleListViewController.swift in Sources */,
 				C7D0783F25550C9E00F6F258 /* SceneDelegate.swift in Sources */,
+				3219E0542560BE0E003BBBA2 /* ArticleDetailPresenter.swift in Sources */,
 				C7D07883255518BB00F6F258 /* ArticleEntity.swift in Sources */,
 				C7D078A02556FABC00F6F258 /* ArticleListRouter.swift in Sources */,
 				C7D0789125551CA000F6F258 /* ArticleUseCase.swift in Sources */,

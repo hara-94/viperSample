@@ -10,11 +10,17 @@ import UIKit
 final class ArticleDetailViewController: UIViewController {
     private let tableView: UITableView = .init()
     var articleEntity: ArticleEntity!
+    var presenter: ArticleDetailPresenterProtocol!
     
     override func loadView() {
         super.loadView()
         
         setTableView()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.didLoad(articleEntity: articleEntity)
     }
 }
 
@@ -63,3 +69,13 @@ private extension ArticleDetailViewController {
     }
 }
 
+extension ArticleDetailViewController: ArticleDetailViewProtocol {
+    func showArticle(_ articleEntity: ArticleEntity) {
+        self.articleEntity = articleEntity
+        tableView.reloadData()
+    }
+    
+    func showError(_ error: Error) {
+        //今回はスキップ
+    }
+}
