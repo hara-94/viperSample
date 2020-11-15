@@ -24,7 +24,11 @@ final class ArticleDetailViewController: UIViewController {
     }
 }
 
-extension ArticleDetailViewController: UITableViewDelegate { }
+extension ArticleDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+}
 
 extension ArticleDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +42,7 @@ extension ArticleDetailViewController: UITableViewDataSource {
         case .title:
             cell.textLabel?.text = "Title"
             cell.detailTextLabel?.text = articleEntity.title
+            print(articleEntity.title)
         case .body:
             cell.textLabel?.text = articleEntity.body
             cell.detailTextLabel?.text = nil
